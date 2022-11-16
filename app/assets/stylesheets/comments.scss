@@ -10,6 +10,7 @@
 .comment-submit{
   display: block;
   //margin-top: 20px;
+  border: none;
 }
 
 .comment{
@@ -23,4 +24,15 @@
 .user-info{
   color: gray;
   font-weight: bold;
+}
+
+.comment-destroy {
+  color: #7B3CFF;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.comment-destroy:hover {
+  color: #fff;
+  background-color: #FF0000;
 }
