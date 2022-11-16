@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @tweet = Tweet.find(params[:tweet_id])
     if @comment.save
-      redirect_to tweet_path(@comment.tweet)
+      CommentChannel.broadcast_to @tweet, { comment: @comment, user: @comment.user }
     else
       @tweet = @comment.tweet
       @comments = @tweet.comments
