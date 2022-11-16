@@ -5,12 +5,12 @@
         <%= @tweet.title %>
       </p>
       <%= link_to "by #{@tweet.user.nickname}", root_path, class: :prototype__user %>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
         <div class="prototype__manage">
-          <%= link_to "編集する", root_path, class: :prototype__btn %>
-          <%= link_to "削除する", root_path, class: :prototype__btn %>
-        </div>
-      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+          <% if user_signed_in? && current_user.id == @tweet.user_id %>
+            <%= link_to "編集する", root_path, class: :prototype__btn %>
+            <%= link_to "削除する", root_path, class: :prototype__btn %>
+          <% end %>
+        </div> 
       <div class="prototype__image">
         <% if @tweet.image.attached? %>
           <%= image_tag @tweet.image %> 
@@ -35,7 +35,7 @@
             <%= @tweet.hashtag %>
         </div>
       </div>
-      
+
       <div class="prototype__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
           <%# <%= form_with model: モデル名,local: true do |f|%>
