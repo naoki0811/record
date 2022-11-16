@@ -43,11 +43,11 @@
             <p class="user-info"><%= comment.user.nickname %>： </p>
             <p><%= comment.content %></p>
             <% if user_signed_in? && current_user.id == comment.user_id %>
-            <%#<p><%=link_to "削除", item_comment_path(comment.item.id), method: :delete, class: "comment-destroy" %></p>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+            <p><%=link_to "削除", tweet_comment_path(comment.tweet.id), method: :delete, class: "comment-destroy" %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
   
     <% if user_signed_in? %>
     <div class="comment-box">
