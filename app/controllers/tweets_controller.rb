@@ -32,6 +32,9 @@ class TweetsController < ApplicationController
     end
   end
 
+  def destory
+  end
+
   def show
   end
 
