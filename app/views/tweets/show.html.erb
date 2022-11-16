@@ -8,7 +8,7 @@
       <div class="postDate">
         <%= @tweet.created_at %>
       </div>
-      <%= link_to "by #{@tweet.user.nickname}", root_path, class: :prototype__user %>
+      <%= link_to "by #{@tweet.user.nickname}", user_path(id: current_user), class: :prototype__user %>
         <div class="prototype__manage">
           <% if user_signed_in? && current_user.id == @tweet.user_id %>
             <%= link_to "編集する", edit_tweet_path(@tweet.id), class: :prototype__btn %>
