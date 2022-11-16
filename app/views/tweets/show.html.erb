@@ -36,31 +36,29 @@
         </div>
       </div>
 
-      <div class="prototype__comments">
-        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
-        <% if user_signed_in? %>
-          <%= form_with model: [@tweet, @comment], local: true do |f|%>
-            <div class="field">
-              <%= f.label :comment, "コメント" %><br />
-              <%= f.text_field :content, id:"comment_content" %>
-            </div>
-            <div class="actions">
-              <%= f.submit "送信する", class: :form__btn  %>
-            </div>
+      <div id="comments">
+      <h4>＜コメント一覧＞</h4>
+        <% @tweet.comments.each do |comment| %>
+          <div class="comment">
+            <p class="user-info"><%= comment.user.nickname %>： </p>
+            <p><%= comment.content %></p>
+            <% if user_signed_in? && current_user.id == comment.user_id %>
+            <%#<p><%=link_to "削除", item_comment_path(comment.item.id), method: :delete, class: "comment-destroy" %></p>
           <% end %>
-        <% end %>
-        <%# // ログインしているユーザーには上記を表示する %>
-        <ul class="comments_lists">
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-          <% @comments.each do |comment| %>
-            <li class="comments_list">
-              <%= comment.content %>
-              <%= link_to comment.user.nickname, root_path, class: :comment_user %>
-            </li>
-          <% end %>
-          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
-        </ul>
-      </div>
+        </div>
+      <% end %>
+    </div>
+  
+    <% if user_signed_in? %>
+    <div class="comment-box">
+      <%= form_with model: [@tweet, @comment], id: "comment-form" do |f| %>
+        <%= f.text_area :content , class: "comment-text"%>
+      <button type="submit" class="comment-btn">
+        <%= f.submit "コメントをする", class: "comment-submit" %>
+      </button>
+    <% end %>
+  </div>
+  <% end %> 
     </div>
   </div>
 </main>
