@@ -51,6 +51,11 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.nav__left{
+  color: #87CEFA;
+}
+
 .logo {
   width: 200px;
 }
@@ -170,6 +175,13 @@ a {
   font-weight: bold;
   text-align: center;
 }
+
+.postDate{
+  font-size: 15px;
+  color: #999;
+  text-align: center;
+}
+
 .prototype__user{
   display: block;
   font-size: 16px;
