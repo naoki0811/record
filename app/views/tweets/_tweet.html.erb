@@ -1,7 +1,7 @@
 <div class="card">
-  <%= link_to image_tag(tweet.image, class: :card__img ), root_path if tweet.image.attached?%>
+  <%= link_to image_tag(tweet.image, class: :card__img ), tweet_path(tweet.id) if tweet.image.attached?%>
   <div class="card__body">
-    <%= link_to tweet.title, root_path, class: :card__title%>
+    <%= link_to tweet.title, tweet_path(tweet.id), class: :card__title%>
     <p class="card__summary">
       <%= tweet.hashtag %>
     </p>
