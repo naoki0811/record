@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :update, :destroy, :show]
 
   def index
-    @tweet = Tweet.all
+    @tweet = Tweet.includes(:user)
   end
 
   def new
