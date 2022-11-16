@@ -4,6 +4,10 @@
       <p class="prototype__hedding">
         <%= @tweet.title %>
       </p>
+
+      <div class="postDate">
+        <%= @tweet.created_at %>
+      </div>
       <%= link_to "by #{@tweet.user.nickname}", root_path, class: :prototype__user %>
         <div class="prototype__manage">
           <% if user_signed_in? && current_user.id == @tweet.user_id %>
@@ -41,6 +45,7 @@
         <% @tweet.comments.each do |comment| %>
           <div class="comment">
             <p class="user-info"><%= comment.user.nickname %>： </p>
+            <div class="postDate"><%= comment.created_at %></div>
             <p><%= comment.content %></p>
             <% if user_signed_in? && current_user.id == comment.user_id %>
             <%#<p><%=link_to "削除", item_comment_path(comment.item.id), method: :delete, class: "comment-destroy" %></p>

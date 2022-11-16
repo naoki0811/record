@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProtoSpace</title>
+    <title>Memory</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,12 +15,13 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+          <h1>memory</h1>
+            <%#<%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "New Proto", new_tweet_path, class: :nav__btn %>
+              <%= link_to "投稿投稿", new_tweet_path, class: :nav__btn %>
             </div>
             <% else %>
             <div class="nav__right">
