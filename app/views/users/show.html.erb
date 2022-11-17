@@ -11,6 +11,7 @@
             <td class="table__col2"><%= @user.nickname %></td>
           </tr>
 
+
           
         </tbody>
       </table>
@@ -18,7 +19,6 @@
         <%= "#{@user.nickname}の投稿"%>
       </h2>
       <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
         <%= render partial: "tweets/tweet", collection: @tweets %>
       </div>
     </div>
