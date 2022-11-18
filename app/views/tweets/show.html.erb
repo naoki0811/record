@@ -40,6 +40,10 @@
         </div>
       </div>
 
+      <div id="favorite_btn_<%= @tweet.id %>">
+        <%= render 'favorites/favorite', tweet: @tweet %>
+      </div>
+
       <div id="comments">
       <h4>＜コメント一覧＞</h4>
         <% @tweet.comments.each do |comment| %>

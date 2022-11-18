@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
 
-  has_many :tweets
+  has_many :tweets, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   has_many :comennts
   attachment :profile_image
 end
