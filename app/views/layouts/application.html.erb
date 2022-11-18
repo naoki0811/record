@@ -23,7 +23,6 @@
               <%= link_to "トップ", root_path, class: :nav__btn %>
               <%= link_to "マイページ", user_path(current_user.id), class: :nav__btn %>
               <%= link_to "新規投稿", new_tweet_path, class: :nav__btn %>
-              <%= link_to "投稿一覧", tweets_path, class: :nav__btn %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
             </div>
             <% else %>
