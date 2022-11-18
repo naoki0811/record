@@ -40,6 +40,18 @@
         </div>
       </div>
 
+      <p class="caption">
+      <% if @tweet.favorited_by?(current_user) %>
+         <%= link_to tweet_favorite_path(@tweet.id), method: :delete do %>
+           ♥<%= @tweet.favorites.count %> いいね
+         <% end %>
+      <% else %>
+         <%= link_to tweet_favorites_path(@tweet), method: :post do %>
+           ♡<%= @tweet.favorites.count %> いいね
+         <% end %>
+      <% end %>
+      </p>
+
       <div id="comments">
       <h4>＜コメント一覧＞</h4>
         <% @tweet.comments.each do |comment| %>
