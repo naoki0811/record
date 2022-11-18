@@ -76,3 +76,4 @@ gem "aws-sdk-s3", require: false
 
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
+
