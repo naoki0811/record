@@ -15,16 +15,20 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-          <h1>memory</h1>
+          <h1><%= link_to "memory", root_path, class: :memory %></h1>
             <%#<%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
+              <%= link_to "トップ", root_path, class: :nav__btn %>
+              <%= link_to "マイページ", user_path(current_user.id), class: :nav__btn %>
+              <%= link_to "新規投稿", new_tweet_path, class: :nav__btn %>
+              <%= link_to "投稿一覧", tweets_path, class: :nav__btn %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "投稿投稿", new_tweet_path, class: :nav__btn %>
             </div>
             <% else %>
             <div class="nav__right">
+              <%= link_to "トップ", root_path, class: :nav__btn %>
               <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
             </div>
@@ -35,7 +39,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright"></p>
     </footer>
   </body>
 </html>

@@ -37,10 +37,10 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: #FFA500;
   margin-bottom: 48px;
   padding: 20px 0;
-
+  height: 70px;
 }
 .inner {
   width: 1024px;
@@ -52,8 +52,12 @@ a {
   justify-content: space-between;
 }
 
-.nav__left{
-  color: #87CEFA;
+.nav__left {
+  color: #ffffff;
+}
+
+.memory {
+  color: #ffffff;
 }
 
 .logo {
@@ -63,25 +67,28 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #ffffff;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #ffffff solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #FF8C00;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #ffffff;
   text-decoration: none;
   user-select: none;
+  border: 1px #ffffff solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
 }
 .nav__logout:hover{
   opacity: 0.5;
