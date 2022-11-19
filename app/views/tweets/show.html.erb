@@ -6,7 +6,7 @@
       </p>
 
       <div class="postDate">
-        <%= @tweet.created_at %>
+        <%= @tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %>
       </div>
       <%= link_to "by #{@tweet.user.nickname}", user_path(@tweet.user.id), class: :prototype__user %>
         <div class="prototype__manage">
