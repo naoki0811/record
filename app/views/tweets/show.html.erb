@@ -8,7 +8,7 @@
       <div class="postDate">
         <%= @tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %>
       </div>
-      <%= link_to "by #{@tweet.user.nickname}", user_path(@tweet.user.id), class: :prototype__user %>
+      <%= link_to "#{@tweet.user.nickname}さんの投稿", user_path(@tweet.user.id), class: :prototype__user %>
         <div class="prototype__manage">
           <% if user_signed_in? && current_user.id == @tweet.user_id %>
             <%= link_to "編集する", edit_tweet_path(@tweet.id), class: :prototype__btn %>
@@ -59,10 +59,10 @@
         <% @tweet.comments.each do |comment| %>
           <div class="comment">
             <p class="user-info"><%= comment.user.nickname %>： </p>
-            <div class="postDate"><%= comment.created_at %></div>
+            <div class="postDate"><%= comment.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
             <p><%= comment.content %></p>
             <% if user_signed_in? && current_user.id == comment.user_id %>
-            <p><%=link_to "削除", tweet_comment_path(comment.tweet.id), method: :delete, class: "comment-destroy" %></p>
+            <p><%=link_to "削除", tweet_comment_path(comment.tweet.id, comment.id), method: :delete, class: "comment-destroy" %></p>
             <% end %>
           </div>
         <% end %>
