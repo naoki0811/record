@@ -11,7 +11,7 @@
       </p>
       <% end %>
       <div class="d-flex">
-        <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.png", class: "mb-3 profile-img" %>
+        <%= attachment_image_tag @user, :profile_image, size: '100x100', format:'png', fallback: "no_image.png", class: "mb-3 profile-img" %>
         <h4 class="ml-3 mb-3 card w-100">
           <h4 class="info">自己紹介</h4>
         <%= @user.profile %>
