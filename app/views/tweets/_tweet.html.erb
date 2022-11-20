@@ -4,6 +4,9 @@
     <%= link_to tweet.title, tweet_path(tweet.id), class: :card__title%>
     <div class="postDate"><%= tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
     <p class="card__summary">
+      <%= tweet.text %>
+    </p>
+    <p class="card__summary">
       <%= tweet.hashtag %>
     </p>
     <%= link_to "by #{tweet.user.nickname}", user_path(tweet.user.id), class: :card__user %>
