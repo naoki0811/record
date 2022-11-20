@@ -37,7 +37,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #FFA500;
+  background-color: #ee8b1278;
   margin-bottom: 48px;
   padding: 20px 0;
   height: 70px;
@@ -53,10 +53,6 @@ a {
 }
 
 .nav__left {
-  color: #ffffff;
-}
-
-.memory {
   color: #ffffff;
 }
 
@@ -92,6 +88,7 @@ a {
 }
 .nav__logout:hover{
   opacity: 0.5;
+  background: #FF8C00;
 }
 
 /* フォーム周り */
