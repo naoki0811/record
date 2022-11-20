@@ -54,10 +54,12 @@ a {
 
 .nav__left {
   color: #ffffff;
+  
 }
 
 .logo {
-  width: 300px;
+  width: 350px;
+  
 }
 .nav__btn{
   display: inline-block;
