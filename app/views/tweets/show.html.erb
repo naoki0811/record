@@ -43,7 +43,7 @@
     <% if user_signed_in? %>
       <p class="caption">
       <% if @tweet.favorited_by?(current_user) %>
-         <%= link_to tweet_favorite_path(@tweet.id), method: :delete do %>
+         <%= link_to tweet_favorites_path(@tweet.id), method: :delete do %>
            ♥<%= @tweet.favorites.count %> いいね
          <% end %>
       <% else %>
