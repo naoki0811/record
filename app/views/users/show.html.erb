@@ -1,29 +1,33 @@
-<div class="main">
-  <div class="inner">
-    <div class="user__wrapper">
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんのページ"%>
-      </h2>
-
+<div class="cover-user-show">
+  <div class="container">
+    <div class="row justify-content-center">
       <% if user_signed_in? && @user == current_user %>
+      <h1 class="font-weight-normal mt-3 mb-3">マイページ</h1>
+      <% else %>
+      <h1 class="font-weight-normal mt-3 mb-3"><%= @user.nickname %>さんのページ</h1>
+      <% end %>
+    </div>
+    <% if user_signed_in? && @user == current_user %>
       <p class="d-flex justify-content-end">
         <%= link_to "プロフィール編集", edit_user_path(@user), class: "btn-sm btn-success" %>
       </p>
+    <% end %>
+    <div class="d-flex">
+      <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.png", class: "mb-3 profile-img" %>
+      <h4 class="ml-3 mb-3 card w-100"><%= @user.profile %></h4>
+    </div>
+    <div class="justify-content-center">
+      <% @tweets.each do |tweet| %>
+      <div class="one-post">
+        <%= link_to tweet_path(tweet) do %>
+        <%= link_to image_tag(tweet.image, size: '300x200', class: :card__img ), tweet_path(tweet.id) if tweet.image.attached?%>
+        <p class="caption mb-0"><%= tweet.title %></p>
+        <div class="postDate"><%= tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
+        <p class="caption"><%= "#{tweet.comments.count} コメント" %></p>
+        <p class="caption"><%= "#{tweet.favorites.count} いいね" %></p>
+        <% end %>
+      </div>
       <% end %>
-      <div class="d-flex">
-        <%= attachment_image_tag @user, :profile_image, size: '100x100', format:'png', fallback: "no_image.png", class: "mb-3 profile-img" %>
-        <h4 class="ml-3 mb-3 card w-100">
-          <h4 class="info">自己紹介</h4>
-        <%= @user.profile %>
-        </h4>
-      </div>
-
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの投稿一覧"%>
-      </h2>
-      <div class="user__card">
-        <%= render partial: "tweets/tweet", collection: @tweets %>
-      </div>
     </div>
   </div>
 </div>

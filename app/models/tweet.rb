@@ -6,7 +6,7 @@ class Tweet < ApplicationRecord
 
   validates :title, presence: true
   validates :text, presence: true, unless: :was_attached?
-  validates :hashtag, presence: true
+
 
   def was_attached?
     self.image.attached?

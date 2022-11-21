@@ -1,5 +1,6 @@
-.comment-form{
+.comment-box{
   display: flex;
+  justify-content: center;
 }
 
 .comment-text{
@@ -9,12 +10,12 @@
 
 .comment-submit{
   display: block;
-  //margin-top: 20px;
   border: none;
 }
 
 .comment{
   display: flex;
+  justify-content: center;
 }
 
 .comment p{

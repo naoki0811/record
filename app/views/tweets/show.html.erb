@@ -1,65 +1,50 @@
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
-      <p class="prototype__hedding">
-        <%= @tweet.title %>
-      </p>
-
-      <div class="postDate">
-        <%= @tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %>
+      
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="font-weight-normal mt-3 ">投稿詳細</h1>
       </div>
-      <%= link_to "#{@tweet.user.nickname}さんの投稿", user_path(@tweet.user.id), class: :prototype__user %>
-        <div class="prototype__manage">
-          <% if user_signed_in? && current_user.id == @tweet.user_id %>
-            <%= link_to "編集する", edit_tweet_path(@tweet.id), class: :prototype__btn %>
-            <%= link_to "削除する", tweet_path(@tweet.id), method: :delete, class: :prototype__btn %>
-          <% end %>
-        </div> 
-      <div class="prototype__image">
+      <div class="row justify-content-center d-block">
+        <p class="caption">
+          <%= link_to "#{@tweet.user.nickname}さんの投稿", user_path(@tweet.user.id), class: :prototype__user %>
+        </p>
         <% if @tweet.image.attached? %>
-          <%= image_tag @tweet.image %> 
+          <%= image_tag @tweet.image, size: '300x200'%> 
         <% end %>
+        <p class="caption"><%= @tweet.title %></p>
+          <h2>感想</h2>
+        <p id="text"><%= @tweet.text %></p>
+        <div class="postDate"><%= @tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
+        <%= link_to '編集する', edit_tweet_path(@tweet.id), class: "btn btn-info mr-3" %>
+        <%= link_to '削除する', tweet_path(@tweet.id),method: :delete, "data-confirm"=>"本当に消しますか？", class: "btn btn-danger" %><br>
+        <%= link_to '投稿一覧ページへ', tweets_path, class: "btn btn-dark mt-3 " %>
       </div>
-      <div class="prototype__body">
-        <div class="prototype__detail">
-          <p class="detail__title">タイトル</p>
-          <p class="detail__message">
-            <%= @tweet.title %>
-          </p>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__title">本文</p>
-          <p class="detail__message">
-            <%= @tweet.text %>
-          </p>
-        </div>
-        <div class="prototype__detail">
-          <p class="detail__title">#</p>
-          <p class="detail__message">
-            <%= @tweet.hashtag %>
-        </div>
-      </div>
-
-    <% if user_signed_in? %>
-      <p class="caption">
-      <% if @tweet.favorited_by?(current_user) %>
-         <%= link_to tweet_favorites_path(@tweet.id), method: :delete do %>
-           ♥<%= @tweet.favorites.count %> いいね
-         <% end %>
+    </div>
+    
+    <div class="justify-content-center mt-3">
+      <% if user_signed_in? %>
+        <p class="caption">
+        <% if @tweet.favorited_by?(current_user) %>
+          <%= link_to tweet_favorites_path(@tweet.id), method: :delete do %>
+          ♥<%= @tweet.favorites.count %> いいね
+        <% end %>
       <% else %>
-         <%= link_to tweet_favorites_path(@tweet), method: :post do %>
-           ♡<%= @tweet.favorites.count %> いいね
-         <% end %>
+        <%= link_to tweet_favorites_path(@tweet), method: :post do %>
+          ♡<%= @tweet.favorites.count %> いいね
+        <% end %>
       <% end %>
       </p>
-    <% end %>
+      <% end %>
+    </div>
 
+    <div class="justify-content-center">
       <div id="comments">
       <h4>＜コメント一覧＞</h4>
         <% @tweet.comments.each do |comment| %>
           <div class="comment">
             <p class="user-info"><%= comment.user.nickname %>： </p>
-            <div class="postDate"><%= comment.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
             <p><%= comment.content %></p>
             <% if user_signed_in? && current_user.id == comment.user_id %>
             <p><%=link_to "削除", tweet_comment_path(comment.tweet.id, comment.id), method: :delete, class: "comment-destroy" %></p>
@@ -67,17 +52,19 @@
           </div>
         <% end %>
       </div>
-  
-    <% if user_signed_in? %>
-    <div class="comment-box">
-      <%= form_with model: [@tweet, @comment], id: "comment-form" do |f| %>
-        <%= f.text_area :content , class: "comment-text"%>
-      <button type="submit" class="comment-btn">
-        <%= f.submit "コメントをする", class: "comment-submit" %>
-      </button>
-    <% end %>
-  </div>
-  <% end %> 
+    </div>
+    
+    <div class="justify-content-center">
+      <% if user_signed_in? %>
+      <div class="comment-box">
+        <%= form_with model: [@tweet, @comment], id: "comment-form" do |f| %>
+          <%= f.text_area :content , class: "comment-text"%>
+        <button type="submit" class="comment-btn mt-3">
+          <%= f.submit "コメントをする", class: "comment-submit" %>
+        </button>
+        <% end %>
+      </div>
+      <% end %> 
     </div>
   </div>
 </main>

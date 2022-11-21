@@ -1,13 +1,35 @@
-<main class="main">
-  <div class="inner">
-    <% if user_signed_in? %>
-      <div class="greeting">
-        <%="こんにちは、" %>
-        <%= link_to "#{current_user.nickname}さん", user_path(id: current_user), class: :greeting__link %>
+<div class="cover-index">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="font-weight-normal mt-3">投稿一覧</h1>
+    </div>
+    <div class=" justify-content-center">
+      <% @tweet.each do |tweet| %>
+      <div class="one-post">
+        <%= link_to tweet_path(tweet) do %>
+        <p class="caption">
+          <%= link_to tweet.title, tweet_path(tweet.id), class: :card__title%>
+          <%= link_to image_tag(tweet.image, size: '300x200', class: :card__img ), tweet_path(tweet.id) if tweet.image.attached?%>
+          <p class="caption"><%= tweet.text %></p>
+          <div class="postDate"><%= tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
+          <% if user_signed_in? %>
+            <p class="caption">
+            <% if tweet.favorited_by?(current_user) %>
+            <%= link_to tweet_favorites_path(tweet.id), method: :delete do %>
+              ♥<%= tweet.favorites.count %> いいね
+            <% end %>
+          <% else %>
+            <%= link_to tweet_favorites_path(tweet), method: :post do %>
+              ♡<%= tweet.favorites.count %> いいね
+            <% end %>
+          <% end %>
+        </p>
+      <% end %>
+          <%= link_to "by #{tweet.user.nickname}", user_path(tweet.user.id), class: :card__user %>
+        <% end %>
+        </p>
       </div>
-    <% end %>
-    <div class="card__wrapper">
-      <%= render partial: 'tweet', collection: @tweet %>
+      <% end %>
     </div>
   </div>
-</main>
+</div>
