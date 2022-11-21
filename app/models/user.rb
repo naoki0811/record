@@ -11,4 +11,3 @@ class User < ApplicationRecord
   has_many :comennts
   attachment :profile_image
 end
- 

@@ -7,12 +7,12 @@ class CommentsController < ApplicationController
     else
       @tweet = @comment.tweet
       @comments = @tweet.comments
-      render "tweets/show"
+      render 'tweets/show'
     end
   end
 
   def destroy
-    comment =Comment.find_by(id: params[:id],tweet_id: params[:tweet_id])
+    comment = Comment.find_by(id: params[:id], tweet_id: params[:tweet_id])
     comment.destroy
     redirect_to tweet_path(params[:tweet_id])
   end
@@ -20,6 +20,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:content).merge(user_id: current_user.id, tweet_id: params[:tweet_id] )
+    params.require(:comment).permit(:content).merge(user_id: current_user.id, tweet_id: params[:tweet_id])
   end
 end

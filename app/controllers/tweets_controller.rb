@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @tweet = Tweet.order("created_at DESC")
+    @tweet = Tweet.order('created_at DESC')
   end
 
   def new
@@ -20,9 +20,9 @@ class TweetsController < ApplicationController
   end
 
   def edit
-    if @tweet.user_id != current_user.id 
-      redirect_to root_path
-    end
+    return unless @tweet.user_id != current_user.id
+
+    redirect_to root_path
   end
 
   def update

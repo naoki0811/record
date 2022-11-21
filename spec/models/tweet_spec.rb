@@ -7,16 +7,16 @@ RSpec.describe Tweet, type: :model do
 
   describe '投稿' do
     context '投稿できる時' do
-      it "フォームに情報が正しく入力されていれば投稿できる" do
+      it 'フォームに情報が正しく入力されていれば投稿できる' do
         expect(@tweet).to be_valid
       end
 
-      it "textが空でも投稿できる" do
-        @tweet.text = ""
+      it 'textが空でも投稿できる' do
+        @tweet.text = ''
         expect(@tweet).to be_valid
       end
 
-      it "imageが空でも投稿できる" do
+      it 'imageが空でも投稿できる' do
         @tweet.image = nil
         expect(@tweet).to be_valid
       end
@@ -42,10 +42,10 @@ RSpec.describe Tweet, type: :model do
         expect(@tweet.errors.full_messages).to include("Text can't be blank")
       end
 
-      it 'user情報が紐づいていないと出品できない'do
+      it 'user情報が紐づいていないと出品できない' do
         @tweet.user = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("User must exist")
+        expect(@tweet.errors.full_messages).to include('User must exist')
       end
     end
   end
