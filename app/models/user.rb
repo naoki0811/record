@@ -8,6 +8,6 @@ class User < ApplicationRecord
 
   has_many :tweets, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  has_many :comennts
+  has_many :comennts, dependent: :destroy
   attachment :profile_image
 end
