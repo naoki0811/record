@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def edit
     @user = User.find(params[:id])
   end
@@ -15,7 +14,7 @@ class UsersController < ApplicationController
     @following_users = @user.following_user
     @follower_users = @user.follower_user
     @tweets = @user.tweets
-    @tweets = @user.tweets.page(params[:page]).per(4).order("created_at DESC")
+    @tweets = @user.tweets.page(params[:page]).per(4).order('created_at DESC')
   end
 
   def follows
