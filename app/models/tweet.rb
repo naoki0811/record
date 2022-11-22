@@ -14,4 +14,12 @@ class Tweet < ApplicationRecord
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end
+
+  def self.search(search)
+    if search != ""
+      Tweet.where('text LIKE(?)', "%#{search}%")
+    else
+      Tweet.order('created_at DESC')
+    end
+  end
 end
