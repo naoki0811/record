@@ -16,7 +16,7 @@
         <p class="caption"><%= @tweet.title %></p>
           <h2>本文</h2>
         <p id="text"><%= @tweet.text %></p>
-        <div class="postDate"><%= @tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
+        <div class="postDate"><%= @tweet.created_at.strftime("%Y年%m月%d日 %H時:%M分") %></div>
         <%= link_to '編集する', edit_tweet_path(@tweet.id), class: "btn btn-info mr-3" %>
         <%= link_to '削除する', tweet_path(@tweet.id),method: :delete, "data-confirm"=>"本当に消しますか？", class: "btn btn-danger" %><br>
         <%= link_to '投稿一覧ページへ', tweets_path, class: "btn btn-dark mt-3 " %>
@@ -38,33 +38,36 @@
       </p>
       <% end %>
     </div>
-
-    <div class="justify-content-center">
-      <div id="comments">
-      <h4>＜コメント一覧＞</h4>
-        <% @tweet.comments.each do |comment| %>
-          <div class="comment">
-            <p class="user-info"><%= comment.user.nickname %>： </p>
-            <p><%= comment.content %></p>
-            <% if user_signed_in? && current_user.id == comment.user_id %>
-            <p><%=link_to "削除", tweet_comment_path(comment.tweet.id, comment.id), method: :delete, class: "comment-destroy" %></p>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-    </div>
     
     <div class="justify-content-center">
       <% if user_signed_in? %>
       <div class="comment-box">
         <%= form_with model: [@tweet, @comment], id: "comment-form" do |f| %>
-          <%= f.text_area :content , class: "comment-text"%>
-        <button type="submit" class="comment-btn mt-3">
-          <%= f.submit "コメントをする", class: "comment-submit" %>
-        </button>
+          <%= f.text_area :content, :size=>"60x3",placeholder: "コメントする" %>
+          <%= f.submit "送信", class: "btn btn-success mb-4" %>
         <% end %>
       </div>
       <% end %> 
+    </div>
+
+    <div class="justify-content-center">
+      <div id="comments">
+      <p>コメント件数：<%= @comments.count %></p>
+        <% @tweet.comments.each do |comment| %>
+          <div class="comments-index mb-2">
+            <p class="user-info"><%= comment.user.nickname %></p>
+            <%= comment.created_at.strftime("%Y年 %m月 %d日 %H時:%M分") %><br>
+            <div class="d-flex">
+              <%= comment.content %>
+              <% if user_signed_in? && current_user.id == comment.user_id %>
+              <div class="comment-delete">
+                <%=link_to "削除", tweet_comment_path(comment.tweet.id, comment.id), method: :delete, class: "btn-sm btn-danger" %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </main>
