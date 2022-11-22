@@ -4,7 +4,7 @@
       <h1 class="font-weight-normal mt-3">投稿一覧</h1>
     </div>
     <div class=" justify-content-center ">
-      <% @tweet.each do |tweet| %>
+      <% @tweets.each do |tweet| %>
       <div class="one-post">
         <%= link_to tweet_path(tweet) do %>
         <p class="caption">
@@ -19,5 +19,6 @@
       </div>
       <% end %>
     </div>
+    <%= paginate @tweets %> 
   </div>
 </div>
