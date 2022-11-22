@@ -23,6 +23,7 @@
               ♡<%= tweet.favorites.count %> いいね
             <% end %>
           <% end %>
+          <p class="caption"><%= "#{tweet.comments.count} コメント" %></p> 
         </p>
       <% end %>
           <%= link_to "by #{tweet.user.nickname}", user_path(tweet.user.id), class: :card__user %>
