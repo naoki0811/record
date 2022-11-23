@@ -15,9 +15,11 @@
           <h2>本文</h2>
         <p id="text"><%= @tweet.text %></p>
         <div class="postDate"><%= @tweet.created_at.strftime("%Y年%m月%d日 %H時:%M分") %></div>
-        <%= link_to '編集する', edit_tweet_path(@tweet.id), class: "btn btn-info mr-3" %>
-        <%= link_to '削除する', tweet_path(@tweet.id),method: :delete, "data-confirm"=>"本当に消しますか？", class: "btn btn-danger" %><br>
-        <%= link_to '投稿一覧ページへ', tweets_path, class: "btn btn-dark mt-3 " %>
+        <% if user_signed_in? && current_user.id == @tweet.user_id %>
+          <%= link_to '編集する', edit_tweet_path(@tweet.id), class: "btn btn-info mr-3" %>
+          <%= link_to '削除する', tweet_path(@tweet.id),method: :delete, "data-confirm"=>"本当に消しますか？", class: "btn btn-danger" %><br>
+          <%= link_to '投稿一覧ページへ', tweets_path, class: "btn btn-dark mt-3 " %>
+        <% end %>
       </div>
     </div>
     
