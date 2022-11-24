@@ -1,5 +1,5 @@
 # アプリケーション名
-MEMORY 〜あなたの想いをここに〜
+Memory 〜あなたの今をここに〜
 
 # アプリケーション概要
 日常の学びや出来事を気楽にシェアすることで、情報の管理ができ、かつ同じ想いを持った人々とつながることができる。
@@ -38,32 +38,15 @@ http://13.230.14.27/
 https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86TfeajcLg/edit#gid=982722306
 
 # 実装した機能についての画像
-・新規登録<br>
-https://gyazo.com/649e6ad4cda8e2d8e8c3288f9f32639a<br>
-・ログイン<br>
-https://gyazo.com/946c28c132cf5c72a5272d3a709992ea<br>
-・新規投稿<br>
-https://gyazo.com/83d533ac78869e11338ea6f62279979e<br>
+・新規投稿・投稿一覧<br>
+[![Image from Gyazo](https://i.gyazo.com/709aebda818b4974ac53505b7aec8800.gif)](https://gyazo.com/709aebda818b4974ac53505b7aec8800)<br>
 ・投稿詳細ページ<br>
-https://gyazo.com/09c480f20686a77694afb5fffdac5299<br>
-・投稿編集<br>
-https://gyazo.com/59844c7d433ad37ea854b59de81e477e<br>
-・投稿削除<br>
-https://gyazo.com/59b2f31b9b91234a374c768a94132771<br>
-・いいね機能<br>
-https://gyazo.com/b3ded7d53aa2fd4f0babd577eca9a86a<br>
-・コメント機能<br>
-https://gyazo.com/7d6f0b24fa5880c6b07e9266188a9cf5<br>
-・投稿詳細ページからユーザー詳細ページへの遷移<br>
-https://gyazo.com/e8b0752c08174023100750dec4abfc0b<br>
-・フォロー機能<br>
-https://gyazo.com/1be6d56530f6ed4c7559e6c7d5511ad7<br>
-・マイページ編集<br>
-https://gyazo.com/b835bb327d85a4ef0f97c21582cd6001<br>
-・投稿検索<br>
-https://gyazo.com/c2359cda1e2e1a07a3c14af2b65d50a9<br>
+[![Image from Gyazo](https://i.gyazo.com/82e3eb9ab3b877bd791e3f0d8e8d10d3.png)](https://gyazo.com/82e3eb9ab3b877bd791e3f0d8e8d10d3)<br>
+・マイページ<br>
+[![Image from Gyazo](https://i.gyazo.com/ce7373364df025104568cc09dcd33a7c.gif)](https://gyazo.com/ce7373364df025104568cc09dcd33a7c)<br>
 
 # 実装予定の機能
+・マークダウンでの記述<br>
 ・ハッシュタグ検索機能<br>
 ・いいね、コメント、フォローの通知機能<br>
 ・いいね機能の非同期機能<br>
@@ -95,9 +78,9 @@ https://gyazo.com/c2359cda1e2e1a07a3c14af2b65d50a9<br>
 ・ヘッダーのロゴ<br>
 サイトで一からロゴを作りました。どんなジャンルでも合うというコンセプトで作成いたしました。
 
-・アプリ名（memory）<br>
+・アプリ名（Memory）<br>
 学んだことや日常の出来事等、なんでも記録してほしい、という気持ちから名付けました。
-サブタイトルの「〜あなたの想いをここに〜」は、日常の出来事はもちろん、今自分がどのレベルなのかこれから何をしていきたいのかを投稿してほしいという意味でつけました。
+サブタイトルの「〜あなたの今をここに〜」は、日常の出来事はもちろん、今自分がどのレベルなのかこれまでどのようにスキルアップしてきたかを投稿してほしいという意味でつけました。
 
 ・レイアウト<br>
 全体的に落ち着いた雰囲気にし、気楽に投稿していただけるような雰囲気作りをいたしました。
