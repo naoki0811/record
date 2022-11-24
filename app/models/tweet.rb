@@ -2,7 +2,7 @@ class Tweet < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  has_one_attached :image
+  has_many_attached :images
 
   validates :title, presence: true
   validates :text, presence: true, unless: :was_attached?
