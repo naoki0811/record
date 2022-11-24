@@ -16,7 +16,7 @@
       <div class="form-group">
         <div id="previews"></div>
         <label class="form-label">画像</label>
-        <%= f.file_field :image %>
+        <%= f.file_field :images, name: 'tweet[images][]', data: {index: 0} %>
       </div>
       <%= f.submit '保存する', class: "btn btn-success" %><br>
       <%= link_to '投稿詳細ページへ', tweet_path(@tweet), class: "btn btn-dark mt-3" %>
