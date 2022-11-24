@@ -8,8 +8,16 @@
         <p class="caption">
           <%= link_to "#{@tweet.user.nickname}さんの投稿", user_path(@tweet.user.id), class: :prototype__user %>
         </p>
+        
         <% if @tweet.image.attached? %>
-          <%= image_tag @tweet.image, size: '300x200'%> 
+          <%= image_tag @tweet.images[0], size: '300x200', class: "main-image" %><br> 
+          <div class="other-images">
+            <% @tweet.images[1..-1].each do |image| %>
+              <div class="other-image">
+                <%= image_tag image %>
+              </div>
+           <%end%>
+          </div>
         <% end %>
         <p class="caption"><%= @tweet.title %></p>
           <h2>本文</h2>
