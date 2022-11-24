@@ -189,6 +189,10 @@ a {
 }
 
 /* 新規投稿ページ */
+.form-field {
+  height: 200px;
+  width: 300px;
+}
 
 /* 詳細ページ */
 .prototype__wrapper{

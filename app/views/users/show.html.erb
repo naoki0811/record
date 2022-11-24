@@ -37,7 +37,7 @@
       <% @tweets.each do |tweet| %>
       <div class="one-post">
         <%= link_to tweet_path(tweet) do %>
-        <%= link_to image_tag(tweet.image, size: '300x200', class: :card__img ), tweet_path(tweet.id) if tweet.image.attached?%>
+        <%= link_to image_tag(tweet.images[0], size: '300x200', class: :card__img ), tweet_path(tweet.id) if tweet.images.attached?%>
         <p class="caption mb-0"><%= tweet.title %></p>
         <div class="postDate"><%= tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
         <p class="caption"><%= "#{tweet.comments.count} コメント" %></p>

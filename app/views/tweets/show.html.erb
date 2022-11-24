@@ -9,7 +9,10 @@
           <%= link_to "#{@tweet.user.nickname}さんの投稿", user_path(@tweet.user.id), class: :prototype__user %>
         </p>
         
-        <% if @tweet.image.attached? %>
+        <p class="caption"><%= @tweet.title %></p>
+          <h2>本文</h2>
+          <p id="text"><%= @tweet.text %></p>
+        <% if @tweet.images.attached? %>
           <%= image_tag @tweet.images[0], size: '300x200', class: "main-image" %><br> 
           <div class="other-images">
             <% @tweet.images[1..-1].each do |image| %>
@@ -19,9 +22,6 @@
            <%end%>
           </div>
         <% end %>
-        <p class="caption"><%= @tweet.title %></p>
-          <h2>本文</h2>
-        <p id="text"><%= @tweet.text %></p>
         <div class="postDate"><%= @tweet.created_at.strftime("%Y年%m月%d日 %H時:%M分") %></div>
         <% if user_signed_in? && current_user.id == @tweet.user_id %>
           <%= link_to '編集する', edit_tweet_path(@tweet.id), class: "btn btn-info mr-3" %>

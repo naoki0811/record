@@ -18,7 +18,7 @@
       <div class="form-group">
         <div id="previews"></div>
         <label class="form-label">画像</label>
-        <%= f.file_field :images, name: 'tweet[images][]', data: {index: 0} %>
+        <%= f.file_field :images, name: 'tweet[images][]', data: {index: 0}, class: "form-field" %>
       </div>
       <%= f.submit "投稿する", class: :form__btn  %>
     <% end %>

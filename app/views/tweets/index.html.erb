@@ -6,13 +6,11 @@
     <div class=" justify-content-center ">
       <% @tweets.each do |tweet| %>
       <div class="one-post">
-        <%= image_tag tweet.images[0] %><br>
         <%= link_to tweet_path(tweet) do %>
         <p class="caption">
           <%= link_to tweet.title, tweet_path(tweet.id), class: :card__title%>
-          <%#<%= link_to image_tag(tweet.image, size: '300x200', class: :card__img ), tweet_path(tweet.id) if tweet.image.attached?%>
-          <%= image_tag tweet.images[0] %><br>
           <p class="caption"><%= tweet.text %></p>
+          <%= link_to image_tag(tweet.images[0], size: '300x200', class: :card__img ), tweet_path(tweet.id) if tweet.images.attached? %>
           <div class="postDate"><%= tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分:%S秒") %></div>
           <p class="caption"><%= "#{tweet.comments.count} コメント" %></p>
           <p class="caption"><%= "#{tweet.favorites.count} いいね" %></p>
