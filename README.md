@@ -39,10 +39,16 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 
 # 実装した機能についての画像
 ・新規投稿・投稿一覧<br>
+
+
 [![Image from Gyazo](https://i.gyazo.com/709aebda818b4974ac53505b7aec8800.gif)](https://gyazo.com/709aebda818b4974ac53505b7aec8800)<br>
 ・投稿詳細ページ<br>
+
+
 [![Image from Gyazo](https://i.gyazo.com/82e3eb9ab3b877bd791e3f0d8e8d10d3.png)](https://gyazo.com/82e3eb9ab3b877bd791e3f0d8e8d10d3)<br>
 ・マイページ<br>
+
+
 [![Image from Gyazo](https://i.gyazo.com/ce7373364df025104568cc09dcd33a7c.gif)](https://gyazo.com/ce7373364df025104568cc09dcd33a7c)<br>
 
 # 実装予定の機能
