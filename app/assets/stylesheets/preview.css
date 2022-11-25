@@ -1,10 +1,18 @@
 .preview{
-  margin-right: 30px;
+  display: inline-block;
 }
+
 
 .image-delete-button {
   text-align: center;
   border: solid 1px;
   cursor: pointer;
-  margin-bottom: 5px;
+  margin: 10px 0;
+  width: 200px;
+  text-align: center;
+}
+
+.preview-image {
+  height: 200px;
+  width: 300px;
 }

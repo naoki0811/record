@@ -1,9 +1,10 @@
 .other-images {
-  display: flex;
+  margin-bottom: 20px;
 }
 
 .other-image {
-  margin-right: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
 .image-delete-button {
@@ -13,6 +14,10 @@
 }
 
 .main-image {
-  height: 200px;
-  width: 200px;
+  margin-bottom: 10px;
+}
+
+.form-image {
+  font-size: 20px;
+  background-color: rgba(184, 125, 36, 0.185);
 }
