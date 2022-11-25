@@ -2,13 +2,14 @@ class Tweet < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  has_one_attached :image
+  has_many_attached :images
 
   validates :title, presence: true
   validates :text, presence: true, unless: :was_attached?
+  validates :images, length: { minimum: 0, maximum: 5, message: 'は0枚以上5枚以下にしてください' }
 
   def was_attached?
-    image.attached?
+    images.attached?
   end
 
   def favorited_by?(user)

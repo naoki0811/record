@@ -190,6 +190,7 @@ a {
 
 /* 新規投稿ページ */
 
+
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
@@ -205,6 +206,7 @@ a {
   color: #999;
   text-align: center;
   margin-bottom: 10px;
+  margin-top: 50px;
 }
 
 .prototype__user{

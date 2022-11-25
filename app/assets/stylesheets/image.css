@@ -1,0 +1,37 @@
+.other-images {
+  margin-bottom: 20px;
+}
+
+.other-image {
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.main-image {
+  margin-bottom: 10px;
+}
+
+.form-image {
+  font-size: 15px;
+  margin-bottom: -0.5rem;
+}
+
+.form-content {
+  width: 600px;
+  font-size: 15px;
+}
+
+.form-field {
+  height: 200px;
+  width: 300px;
+  font-size: 15px;
+  margin-right: 14px;
+  
+}
+

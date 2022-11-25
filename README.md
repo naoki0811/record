@@ -57,8 +57,8 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 ・いいね、コメント、フォローの通知機能<br>
 ・いいね機能の非同期機能<br>
 ・投稿の下書き機能<br>
-・複数画像投稿機能<br>
-・レイアウトをより良くする<br>
+・フォロワー同士のチャット機能<br>
+・ポップアップ機能<br>
 
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/e4d4294d76385c89ad7022bf9837ff8b.png)](https://gyazo.com/e4d4294d76385c89ad7022bf9837ff8b)
