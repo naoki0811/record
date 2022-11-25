@@ -22,7 +22,7 @@
            <%end%>
           </div>
         <% end %>
-        <div class="postDate"><%= @tweet.created_at.strftime("%Y年%m月%d日 %H時:%M分") %></div>
+        <div class="postDate mt-1"><%= @tweet.created_at.strftime("%Y年%m月%d日 %H時:%M分") %></div>
         <% if user_signed_in? && current_user.id == @tweet.user_id %>
           <%= link_to '編集する', edit_tweet_path(@tweet.id), class: "btn btn-info mr-3" %>
           <%= link_to '削除する', tweet_path(@tweet.id),method: :delete, "data-confirm"=>"本当に消しますか？", class: "btn btn-danger" %><br>
