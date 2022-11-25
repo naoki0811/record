@@ -2,17 +2,23 @@
   display: inline-block;
 }
 
-
 .image-delete-button {
   text-align: center;
-  border: solid 1px;
-  cursor: pointer;
-  margin: 10px 0;
+  margin: 10px 50px;
   width: 200px;
-  text-align: center;
+  align-items: center;
+  border-color: #dc3545;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+
+.image-delete-button:hover {
+  background-color: #e11429;
 }
 
 .preview-image {
   height: 200px;
   width: 300px;
 }
+

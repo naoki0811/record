@@ -18,6 +18,20 @@
 }
 
 .form-image {
-  font-size: 20px;
-  background-color: rgba(184, 125, 36, 0.185);
+  font-size: 15px;
+  margin-bottom: -0.5rem;
 }
+
+.form-content {
+  width: 600px;
+  font-size: 15px;
+}
+
+.form-field {
+  height: 200px;
+  width: 300px;
+  font-size: 15px;
+  margin-right: 14px;
+  
+}
+

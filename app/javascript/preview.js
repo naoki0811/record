@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
     newFileField.addEventListener("change", changedFileField);
 
     // 生成したfile_fieldを表示
-    const fileFieldsArea = document.querySelector('.form-label');
+    const fileFieldsArea = document.querySelector('.form-image');
     fileFieldsArea.appendChild(newFileField);
   };
 

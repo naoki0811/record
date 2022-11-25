@@ -6,7 +6,7 @@ class Tweet < ApplicationRecord
 
   validates :title, presence: true
   validates :text, presence: true, unless: :was_attached?
-  validates :images, length: { minimum: 0, maximum: 5, message: "は0枚以上5枚以下にしてください" }
+  validates :images, length: { minimum: 0, maximum: 5, message: 'は0枚以上5枚以下にしてください' }
 
   def was_attached?
     images.attached?
