@@ -41,7 +41,7 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 ・新規投稿・投稿一覧<br>
 
 
-[![Image from Gyazo](https://i.gyazo.com/709aebda818b4974ac53505b7aec8800.gif)](https://gyazo.com/709aebda818b4974ac53505b7aec8800)<br>
+[![Image from Gyazo](https://i.gyazo.com/3b27c4f5eb3ec857f37ea6481cf3066a.gif)](https://gyazo.com/3b27c4f5eb3ec857f37ea6481cf3066a)<br>
 ・投稿詳細ページ<br>
 
 
@@ -58,7 +58,6 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 ・いいね機能の非同期機能<br>
 ・投稿の下書き機能<br>
 ・フォロワー同士のチャット機能<br>
-・ポップアップ機能<br>
 
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/e4d4294d76385c89ad7022bf9837ff8b.png)](https://gyazo.com/e4d4294d76385c89ad7022bf9837ff8b)
