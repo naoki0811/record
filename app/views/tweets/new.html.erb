@@ -5,6 +5,7 @@
     </div>
     <div class="row justify-content-center">
       <%= form_with model: @tweet, id: 'new_tweet', local: true do |f|%>
+        <%= render 'shared/error_messages', model: f.object %>
       <div class="form-group">
         <label class="form-label">タイトル</label>
         <%= f.text_field :title, class: "form-control" %>

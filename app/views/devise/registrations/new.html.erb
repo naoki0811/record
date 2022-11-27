@@ -4,6 +4,7 @@
       <h1 class="font-weight-normal mt-3 mb-3">新規登録</h1>
 
       <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
         <div class="field">
           <%= f.label :nickname, "名前", class: "form-label"%><br />
           <%= f.text_field :nickname, id:"user_name" %>

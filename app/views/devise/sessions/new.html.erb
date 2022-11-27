@@ -3,6 +3,7 @@
     <div class="justify-content-center">
       <h1 class="font-weight-normal mt-3 mb-3">ログイン</h1>
         <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
 
         <div class="field">
           <%= f.label :email, "Eメール", class: "form-label" %><br />
