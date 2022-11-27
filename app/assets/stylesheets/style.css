@@ -315,13 +315,13 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #999;
-  padding: 10px 0;
-}
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
+  background-color: #bfb4aa ;
+  padding: 5px 20px;
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  bottom: 0;
+  position: fixed;
 }
 
 /* タブレット対応 */
