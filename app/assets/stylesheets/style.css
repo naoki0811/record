@@ -37,10 +37,13 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #eb8e2acb ;
+  background-color: #eb8e2a ;
   padding: 10px 0;
+  width: 100%;
   height: 70px;
   align-items: center;
+  position: fixed;
+  z-index: 9999;
 }
 .inner {
   width: 1024px;
