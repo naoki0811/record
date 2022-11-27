@@ -41,19 +41,19 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 ・新規投稿・投稿一覧<br>
 
 
-[![Image from Gyazo](https://i.gyazo.com/3b27c4f5eb3ec857f37ea6481cf3066a.gif)](https://gyazo.com/3b27c4f5eb3ec857f37ea6481cf3066a)<br>
+[![Image from Gyazo](https://i.gyazo.com/e37b83e07b88c0b0d19b31ede26b882e.gif)](https://gyazo.com/e37b83e07b88c0b0d19b31ede26b882e)<br>
 
 
 ・投稿詳細ページ<br>
 
 
-[![Image from Gyazo](https://i.gyazo.com/391dab36d57730e56bc8454533406dd1.gif)](https://gyazo.com/391dab36d57730e56bc8454533406dd1)<br>
+[![Image from Gyazo](https://i.gyazo.com/3890c72cfd120d415014bd8e1578ae2c.gif)](https://gyazo.com/3890c72cfd120d415014bd8e1578ae2c)<br>
 
 
 ・マイページ<br>
 
 
-[![Image from Gyazo](https://i.gyazo.com/dff720f0cd3e5c7574a56d959425d4ae.gif)](https://gyazo.com/dff720f0cd3e5c7574a56d959425d4ae)<br>
+[![Image from Gyazo](https://i.gyazo.com/c12d1f1ee494f10d67ca55a19a42bf6d.gif)](https://gyazo.com/c12d1f1ee494f10d67ca55a19a42bf6d)<br>
 
 # 実装予定の機能
 ・マークダウンでの記述<br>
