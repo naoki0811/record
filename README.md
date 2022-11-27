@@ -42,14 +42,18 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 
 
 [![Image from Gyazo](https://i.gyazo.com/3b27c4f5eb3ec857f37ea6481cf3066a.gif)](https://gyazo.com/3b27c4f5eb3ec857f37ea6481cf3066a)<br>
+
+
 ・投稿詳細ページ<br>
 
 
-[![Image from Gyazo](https://i.gyazo.com/82e3eb9ab3b877bd791e3f0d8e8d10d3.png)](https://gyazo.com/82e3eb9ab3b877bd791e3f0d8e8d10d3)<br>
+[![Image from Gyazo](https://i.gyazo.com/391dab36d57730e56bc8454533406dd1.gif)](https://gyazo.com/391dab36d57730e56bc8454533406dd1)<br>
+
+
 ・マイページ<br>
 
 
-[![Image from Gyazo](https://i.gyazo.com/ce7373364df025104568cc09dcd33a7c.gif)](https://gyazo.com/ce7373364df025104568cc09dcd33a7c)<br>
+[![Image from Gyazo](https://i.gyazo.com/dff720f0cd3e5c7574a56d959425d4ae.gif)](https://gyazo.com/dff720f0cd3e5c7574a56d959425d4ae)<br>
 
 # 実装予定の機能
 ・マークダウンでの記述<br>
