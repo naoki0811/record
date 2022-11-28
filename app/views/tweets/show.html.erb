@@ -10,8 +10,12 @@
         </p>
         
         <p class="caption"><%= @tweet.title %></p>
-          <h2>本文</h2>
-          <p id="text"><%= safe_join(@tweet.text.split("\n"),tag(:br)) %></p>
+          <article>
+            <div class="toc"><%= toc(@tweet.text).html_safe %>
+            </div>
+            <div class="markdown"><%= markdown(@tweet.text).html_safe %>
+             </div>
+          </article>
         <% if @tweet.images.attached? %>
           <%= image_tag @tweet.images[0], size: '300x200', class: "main-image" %><br> 
           <div class="other-images">
@@ -67,9 +71,9 @@
         <% @tweet.comments.each do |comment| %>
           <div class="comments-index mb-2">
             <p class="user-info"><%= comment.user.nickname %></p>
-            <%= comment.created_at.strftime("%Y年 %m月 %d日 %H時:%M分") %><br>
             <div class="comment-content">
-              <%= comment.content %>
+              <%= comment.content %><br>
+              <%= comment.created_at.strftime("%Y年 %m月 %d日 %H時:%M分") %>
               <% if user_signed_in? && current_user.id == comment.user_id %>
               <div class="comment-delete">
                 <%=link_to "削除", tweet_comment_path(comment.tweet.id, comment.id), method: :delete, class: "btn-sm btn-danger" %>
