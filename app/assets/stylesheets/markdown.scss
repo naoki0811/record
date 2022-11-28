@@ -195,6 +195,10 @@
         background-color: lightgreen;
       }
     }
+
+    .rouge-code {
+      text-align: left;
+    }
   }
 
   table:not(.rouge-table) { @include richText_table }
