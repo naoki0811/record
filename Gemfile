@@ -82,6 +82,3 @@ gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 
 gem 'kaminari'
-
-gem 'redcarpet'
-gem 'rouge'
