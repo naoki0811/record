@@ -8,6 +8,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../preview") 
+require('markdown')
 
 //= require jquery3
 //= require popper
