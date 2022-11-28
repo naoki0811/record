@@ -25,6 +25,7 @@
 .form-content {
   width: 600px;
   font-size: 15px;
+  margin: 0 auto;
 }
 
 .form-field {
