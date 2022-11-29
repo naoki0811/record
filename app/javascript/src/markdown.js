@@ -1,20 +1,9 @@
-window.copy = function(e) {
-  // クリックしたボタンに紐づくコードの範囲の定義
-  let code = e.closest('.highlight-wrap').querySelector('.rouge-code')
-
-  // クリップボードにコードをコピーしてから、ボタンのテキストを変更する
-  navigator.clipboard.writeText(code.innerText)
-    .then(() => e.innerText = 'Copied')
-
-  // 任意：コピーしたコードが選択されたようにする 
-  window.getSelection().selectAllChildren(code)
-}
-
-window.addEventListener('turbolinks:load', function(){
+window.addEventListener('turbo:load', function(){
   let editArea = document.getElementById('article_markdown_content') // テキストエリア
   let previewArea = document.getElementById('preview') // プレビューエリア
+  
   if (!editArea || !previewArea) return // テキストエリアとプレビューエリアがなかったらリターン
-
+  
   // タイピングが1秒停止したらプレビューする、タイピングし続ける時はプレビューしない。
   editArea.addEventListener('keyup', delay(function() {
     preview()
