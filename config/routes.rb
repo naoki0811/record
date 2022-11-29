@@ -15,5 +15,11 @@ Rails.application.routes.draw do
     end
     resource :relationships, only: [:create, :destroy]
   end
+
+  namespace :api, format: :json do
+    namespace :v1 do
+      post '/tweets/preview', to: 'tweets#preview'
+    end
+  end
 end
 
