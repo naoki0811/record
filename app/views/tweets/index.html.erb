@@ -9,7 +9,15 @@
         <%= link_to tweet_path(tweet) do %>
         <p class="caption">
           <%= link_to tweet.title, tweet_path(tweet.id), class: :card__title%>
-          <p class="caption"><%= safe_join(tweet.text.split("\n"),tag(:br)) %></p>
+
+          <p class="caption">
+          <article>
+            <div class="toc"><%= toc(tweet.text).html_safe %>
+            </div>
+            <div class="markdown"><%= markdown(tweet.text).html_safe %>
+             </div>
+          </article>
+          </p>
           <%= link_to image_tag(tweet.images[0], size: '300x200', class: :card__img ), tweet_path(tweet.id) if tweet.images.attached? %>
           <div class="postDate mt-1"><%= tweet.created_at.strftime("%Y年-%m月-%d日 %H時:%M分") %></div>
           <p class="caption"><%= "#{tweet.comments.count} コメント" %></p>

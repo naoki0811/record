@@ -127,6 +127,9 @@ a {
   margin-bottom: 40px;
 }
 
+.form-btn {
+  display: flex;
+}
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -140,6 +143,7 @@ a {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
   margin-bottom: 20px;
+  margin:auto
 }
 
 .form__btn:hover {
@@ -192,6 +196,19 @@ a {
 }
 
 /* 新規投稿ページ */
+.code-block {
+  margin: 0 auto;
+  width: 700px;
+}
+.code__block {
+}
+.preview__nav {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: -130px; 
+}
+
+
 
 
 /* 詳細ページ */
@@ -367,3 +384,4 @@ a {
     width: 100%;
   }
 }
+
