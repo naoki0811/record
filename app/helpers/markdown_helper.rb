@@ -63,7 +63,7 @@ module MarkdownHelper
   def markdown(text)
     options = {
       with_toc_data: true,
-      hard_wrap: true,
+      hard_wrap: true
     }
     extensions = {
       no_intra_emphasis: true,
@@ -77,7 +77,7 @@ module MarkdownHelper
       strikethrough: true,
       underline: true,
       highlight: true,
-      quote: true,
+      quote: true
     }
 
     renderer = CustomRenderHTML.new(options)
