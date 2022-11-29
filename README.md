@@ -44,6 +44,12 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 [![Image from Gyazo](https://i.gyazo.com/e37b83e07b88c0b0d19b31ede26b882e.gif)](https://gyazo.com/e37b83e07b88c0b0d19b31ede26b882e)<br>
 
 
+・マークダウンでの投稿<br>
+
+
+[![Image from Gyazo](https://i.gyazo.com/f26c651ce0bda33b9052b071efcd4545.gif)](https://gyazo.com/f26c651ce0bda33b9052b071efcd4545)
+
+
 ・投稿詳細ページ<br>
 
 
@@ -55,8 +61,8 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 
 [![Image from Gyazo](https://i.gyazo.com/c12d1f1ee494f10d67ca55a19a42bf6d.gif)](https://gyazo.com/c12d1f1ee494f10d67ca55a19a42bf6d)<br>
 
+
 # 実装予定の機能
-・マークダウンでの記述<br>
 ・ハッシュタグ検索機能<br>
 ・いいね、コメント、フォローの通知機能<br>
 ・いいね機能の非同期機能<br>
