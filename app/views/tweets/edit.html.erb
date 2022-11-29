@@ -9,15 +9,25 @@
         <label class="form-label">タイトル</label>
         <%= f.text_field :title, class: "form-control" %>
       </div>
+
       <div class="form-group">
         <label class="form-label">テキスト</label>
         <%= f.text_area :text, id: 'article_markdown_content',class: "form-control", placeholder:"マークダウン形式OK" %>
       </div>
-      <div class="form-group">
+
+      <div class="form-content">
         <div id="previews"></div>
-        <label class="form-label"></label>
-        <%= f.file_field :images, name: 'tweet[images][]', data: {index: 0} %>
+        <label class="form-image"></label>
+        <%= f.file_field :images, name: 'tweet[images][]', data: {index: 0}, class: "form-field" %>
       </div>
+
+      <div class="code-block">
+        <div class="code__block">
+          <div class="preview__nav">Preview</div>
+          <div class="markdown__space markdown" id="preview" ></div>
+        </div>   
+      </div>
+
       <%= f.submit '保存する', class: "btn btn-success" %><br>
       <%= link_to '投稿詳細ページへ', tweet_path(@tweet), class: "btn btn-dark mt-3" %>
       <% end %>

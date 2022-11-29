@@ -1,7 +1,7 @@
 <div class="cover-new">
   <div class="container">
     <div class="row justify-content-center">
-      <h1 class="font-weight-normal mt-2">新規投稿</h1>
+      <h1 class="font-weight-normal mt-3 mb-3">新規投稿</h1>
     </div>
     <div class="row justify-content-center">
       <%= form_with model: @tweet, id: 'new_tweet', local: true do |f|%>
@@ -15,21 +15,21 @@
         <label class="form-label">テキスト</label>
         <%= f.text_area :text, id: 'article_markdown_content',class: "form-control", placeholder:"マークダウン形式OK" %>
       </div>
-      </div>
 
       <div class="form-content">
         <div id="previews"></div>
         <label class="form-image"></label>
         <%= f.file_field :images, name: 'tweet[images][]', data: {index: 0}, class: "form-field" %>
       </div>
-      <div class="form-btn">
-        <%= f.submit "投稿する", class: :form__btn  %>
-      </div>
 
-      <div class="code__block">
-        <div class="preview__nav">プレビュー</div>
-        <div class="markdown__space markdown" id="preview" ></div>   
+      <div class="code-block">
+        <div class="code__block">
+          <div class="preview__nav">Preview</div>
+          <div class="markdown__space markdown" id="preview" ></div>
+        </div>   
       </div>
+      
+      <%= f.submit '投稿する', class: "btn btn-success" %><br>
       <% end %>
     </div>
   </div>

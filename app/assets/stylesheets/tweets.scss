@@ -9,10 +9,14 @@ h2 {
 .cover-new {
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
-  background-blend-mode: lighten;
-  background-size: 100% 100%;
   padding-top: 120px;
+  margin-bottom: 65px;
+}
+
+.cover-edit {
+  padding-top: 120px;
+  height: 100%;
+  width: 100%;
   margin-bottom: 65px;
 }
 
@@ -22,7 +26,7 @@ h2 {
 }
 
 .form-group {
-  width: 600px;
+  width: 700px;
 }
 
 .cover-index {
