@@ -18,7 +18,7 @@ class Tweet < ApplicationRecord
 
   def self.search(search)
     if search != ''
-      Tweet.where('text LIKE(?)', "%#{search}%")
+      Tweet.where('text LIKE(?) OR title LIKE(?)', "%#{search}%", "%#{search}%")
     else
       Tweet.order('created_at DESC')
     end

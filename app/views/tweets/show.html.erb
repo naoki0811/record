@@ -14,7 +14,7 @@
             <div class="toc"><%= toc(@tweet.text).html_safe %>
             </div>
             <div class="markdown"><%= markdown(@tweet.text).html_safe %>
-             </div>
+            </div>
           </article>
         <% if @tweet.images.attached? %>
           <%= image_tag @tweet.images[0], size: '300x200', class: "main-image" %><br> 
