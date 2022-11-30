@@ -9,6 +9,7 @@
     </div>
     <p class="d-flex justify-content-end">
       <% if user_signed_in? && @user == current_user %>
+      <%= link_to "いいねした投稿", favorites_user_path(@user), class: "btn-sm btn-danger" %>
       <%= link_to "プロフィール編集", edit_user_path(@user), class: "btn-sm btn-success" %>
       <% end %>
       <% if user_signed_in? && current_user != @user %>
