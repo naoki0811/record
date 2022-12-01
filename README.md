@@ -65,7 +65,6 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 ・ハッシュタグ検索機能<br>
 ・いいね、コメント、フォローの通知機能<br>
 ・いいね機能の非同期機能<br>
-・いいね一覧表示<br>
 ・フォロワー同士のチャット機能<br>
 
 # ER図
