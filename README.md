@@ -61,12 +61,10 @@ https://docs.google.com/spreadsheets/d/1kzvp3Qj8q-ArmiXsKD6yEQgHUxLIwfxUR86Tfeaj
 
 [![Image from Gyazo](https://i.gyazo.com/c12d1f1ee494f10d67ca55a19a42bf6d.gif)](https://gyazo.com/c12d1f1ee494f10d67ca55a19a42bf6d)<br>
 
-
 # 実装予定の機能
 ・ハッシュタグ検索機能<br>
 ・いいね、コメント、フォローの通知機能<br>
 ・いいね機能の非同期機能<br>
-・投稿の下書き機能<br>
 ・フォロワー同士のチャット機能<br>
 
 # ER図

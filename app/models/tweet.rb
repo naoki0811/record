@@ -6,7 +6,7 @@ class Tweet < ApplicationRecord
 
   validates :title, presence: true
   validates :text, presence: true, unless: :was_attached?
-  validates :images, length: { minimum: 0, maximum: 5, message: 'は0枚以上5枚以下にしてください' }
+  validates :images, length: { minimum: 0, maximum: 4, message: 'は0枚以上4枚以下にしてください' }
 
   def was_attached?
     images.attached?
@@ -18,7 +18,7 @@ class Tweet < ApplicationRecord
 
   def self.search(search)
     if search != ''
-      Tweet.where('text LIKE(?)', "%#{search}%")
+      Tweet.where('text LIKE(?) OR title LIKE(?)', "%#{search}%", "%#{search}%")
     else
       Tweet.order('created_at DESC')
     end

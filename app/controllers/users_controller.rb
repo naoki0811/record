@@ -26,6 +26,13 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @users = user.follower_user
   end
+
+  def favorites
+    @user = User.find(params[:id])
+    favorites= Favorite.where(user_id: @user.id).order("created_at DESC").pluck(:tweet_id)
+    @favorite_tweets = Tweet.find(favorites)
+    @tweets = @user.tweets.page(params[:page]).per(4).order('created_at DESC')
+  end
 end
 
 private
