@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @following_users = @user.following_user
     @follower_users = @user.follower_user
     @tweets = @user.tweets
-    @tweets = @user.tweets.page(params[:page]).per(4).order('created_at DESC')
+    @tweets = @user.tweets.page(params[:page]).per(5).order('created_at DESC')
   end
 
   def follows
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     favorites= Favorite.where(user_id: @user.id).order("created_at DESC").pluck(:tweet_id)
     @favorite_tweets = Tweet.find(favorites)
-    @tweets = @user.tweets.page(params[:page]).per(4).order('created_at DESC')
+    @tweets = @user.tweets.page(params[:page]).per(5).order('created_at DESC')
   end
 end
 
